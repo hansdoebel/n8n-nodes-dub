@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-dub",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Dub.io API community node for n8n — automate link shortening.",
 	"license": "MIT",
 	"homepage": "https://github.com/hansdoebel/n8n-nodes-dub",
