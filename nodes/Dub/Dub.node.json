@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-dub",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [""],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://dub.co/docs/api-reference/tokens"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://dub.co/docs/api-reference/introduction"
+			}
+		]
+	}
+}

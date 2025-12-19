@@ -1,0 +1,78 @@
+{
+	"name": "n8n-nodes-dub",
+	"version": "0.0.1",
+	"description": "Dub.io API community node for n8n — automate link shortening.",
+	"license": "MIT",
+	"homepage": "https://github.com/hansdoebel/n8n-nodes-dub",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n-community-node",
+		"n8n",
+		"n8n-node",
+		"workflow-automation",
+		"workflow",
+		"automation",
+		"dub",
+		"dub-co",
+		"dubco",
+		"dub-api",
+		"link-shortener",
+		"url-shortener",
+		"short-links",
+		"link-management",
+		"link-tracking",
+		"analytics",
+		"utm"
+	],
+	"author": {
+		"name": "Hans Doebel",
+		"email": "dev@hansdoebel.de"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hansdoebel/n8n-nodes-dub.git"
+	},
+	"bugs": {
+		"url": "https://github.com/hansdoebel/n8n-nodes-dub/issues"
+	},
+	"engines": {
+		"node": ">=18.10",
+		"pnpm": ">=10.25.0"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"funding": {
+		"type": "buymeacoffee",
+		"url": "https://buymeacoffee.com/hansdoebel"
+	},
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": false,
+		"credentials": [
+			"dist/credentials/DubApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Dub/Dub.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "^0.17.0",
+		"eslint": "9.39.2",
+		"prettier": "3.7.4",
+		"release-it": "^19.1.0",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

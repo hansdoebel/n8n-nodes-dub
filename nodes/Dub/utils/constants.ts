@@ -1,0 +1,12 @@
+export const API_ENDPOINTS = {
+  BASE_URL: "https://api.dub.co",
+  LINKS_CREATE: "/links",
+  LINKS_GET: "/links/info",
+  LINKS_GET_ALL: "/links",
+  LINKS_UPDATE: (linkId: string) => `/links/${linkId}`,
+  LINKS_DELETE: (linkId: string) => `/links/${linkId}`,
+  LINKS_UPSERT: "/links/upsert",
+  LINKS_BULK_CREATE: "/links/bulk",
+  LINKS_BULK_UPDATE: "/links/bulk",
+  LINKS_BULK_DELETE: "/links/bulk",
+};
