@@ -45,6 +45,13 @@ import {
   conversionsTrackLead,
   conversionsTrackSale,
 } from "./resources/conversions";
+import {
+  customersDelete,
+  customersDescription,
+  customersGet,
+  customersGetAll,
+  customersUpdate,
+} from "./resources/customers";
 
 export class Dub implements INodeType {
   description: INodeTypeDescription = {
@@ -84,6 +91,10 @@ export class Dub implements INodeType {
             value: "conversions",
           },
           {
+            name: "Customer",
+            value: "customers",
+          },
+          {
             name: "Domain",
             value: "domains",
           },
@@ -103,6 +114,7 @@ export class Dub implements INodeType {
         default: "links",
       },
       ...conversionsDescription,
+      ...customersDescription,
       ...domainsDescription,
       ...foldersDescription,
       ...linksDescription,
@@ -123,6 +135,12 @@ export class Dub implements INodeType {
       conversions: {
         trackLead: conversionsTrackLead,
         trackSale: conversionsTrackSale,
+      },
+      customers: {
+        delete: customersDelete,
+        get: customersGet,
+        getAll: customersGetAll,
+        update: customersUpdate,
       },
       domains: {
         create: domainsCreate,

@@ -23,4 +23,8 @@ export const API_ENDPOINTS = {
   PARTNERS_UPDATE: "/partners",
   CONVERSIONS_TRACK_LEAD: "/track/lead",
   CONVERSIONS_TRACK_SALE: "/track/sale",
+  CUSTOMERS_GET: (id: string) => `/customers/${id}`,
+  CUSTOMERS_GET_ALL: "/customers",
+  CUSTOMERS_UPDATE: (id: string) => `/customers/${id}`,
+  CUSTOMERS_DELETE: (id: string) => `/customers/${id}`,
 };
