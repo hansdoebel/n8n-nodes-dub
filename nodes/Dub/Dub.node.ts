@@ -52,6 +52,7 @@ import {
   customersGetAll,
   customersUpdate,
 } from "./resources/customers";
+import { analyticsDescription, analyticsGet } from "./resources/analytics";
 
 export class Dub implements INodeType {
   description: INodeTypeDescription = {
@@ -87,6 +88,10 @@ export class Dub implements INodeType {
         noDataExpression: true,
         options: [
           {
+            name: "Analytics",
+            value: "analytics",
+          },
+          {
             name: "Conversion",
             value: "conversions",
           },
@@ -113,6 +118,7 @@ export class Dub implements INodeType {
         ],
         default: "links",
       },
+      ...analyticsDescription,
       ...conversionsDescription,
       ...customersDescription,
       ...domainsDescription,
@@ -132,6 +138,9 @@ export class Dub implements INodeType {
       string,
       Record<string, (this: IExecuteFunctions) => Promise<INodeExecutionData[]>>
     > = {
+      analytics: {
+        get: analyticsGet,
+      },
       conversions: {
         trackLead: conversionsTrackLead,
         trackSale: conversionsTrackSale,
