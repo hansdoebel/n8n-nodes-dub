@@ -1,6 +1,8 @@
 export const API_ENDPOINTS = {
   BASE_URL: "https://api.dub.co",
   ANALYTICS_GET: "/analytics",
+  COMMISSIONS_GET_ALL: "/commissions",
+  COMMISSIONS_UPDATE: (id: string) => `/commissions/${id}`,
   CONVERSIONS_TRACK_LEAD: "/track/lead",
   CONVERSIONS_TRACK_SALE: "/track/sale",
   CUSTOMERS_DELETE: (id: string) => `/customers/${id}`,

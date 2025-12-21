@@ -59,6 +59,11 @@ import {
   tagsGetAll,
   tagsUpdate,
 } from "./resources/tags";
+import {
+  commissionsDescription,
+  commissionsGetAll,
+  commissionsUpdate,
+} from "./resources/commissions";
 
 export class Dub implements INodeType {
   description: INodeTypeDescription = {
@@ -98,6 +103,10 @@ export class Dub implements INodeType {
             value: "analytics",
           },
           {
+            name: "Commission",
+            value: "commissions",
+          },
+          {
             name: "Conversion",
             value: "conversions",
           },
@@ -129,6 +138,7 @@ export class Dub implements INodeType {
         default: "links",
       },
       ...analyticsDescription,
+      ...commissionsDescription,
       ...conversionsDescription,
       ...customersDescription,
       ...domainsDescription,
@@ -151,6 +161,10 @@ export class Dub implements INodeType {
     > = {
       analytics: {
         get: analyticsGet,
+      },
+      commissions: {
+        getAll: commissionsGetAll,
+        update: commissionsUpdate,
       },
       conversions: {
         trackLead: conversionsTrackLead,
