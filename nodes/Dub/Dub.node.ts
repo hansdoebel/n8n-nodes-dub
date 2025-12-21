@@ -53,6 +53,12 @@ import {
   customersUpdate,
 } from "./resources/customers";
 import { analyticsDescription, analyticsGet } from "./resources/analytics";
+import {
+  tagsCreate,
+  tagsDescription,
+  tagsGetAll,
+  tagsUpdate,
+} from "./resources/tags";
 
 export class Dub implements INodeType {
   description: INodeTypeDescription = {
@@ -115,6 +121,10 @@ export class Dub implements INodeType {
             name: "Partner",
             value: "partners",
           },
+          {
+            name: "Tag",
+            value: "tags",
+          },
         ],
         default: "links",
       },
@@ -125,6 +135,7 @@ export class Dub implements INodeType {
       ...foldersDescription,
       ...linksDescription,
       ...partnersDescription,
+      ...tagsDescription,
     ],
   };
 
@@ -179,6 +190,11 @@ export class Dub implements INodeType {
         get: partnersGet,
         getAll: partnersGetAll,
         update: partnersUpdate,
+      },
+      tags: {
+        create: tagsCreate,
+        getAll: tagsGetAll,
+        update: tagsUpdate,
       },
     };
 

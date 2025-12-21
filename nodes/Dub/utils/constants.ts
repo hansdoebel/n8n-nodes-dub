@@ -28,4 +28,7 @@ export const API_ENDPOINTS = {
   PARTNERS_GET: "/partners",
   PARTNERS_GET_ALL: "/partners",
   PARTNERS_UPDATE: "/partners",
+  TAGS_CREATE: "/tags",
+  TAGS_GET_ALL: "/tags",
+  TAGS_UPDATE: (id: string) => `/tags/${id}`,
 };
