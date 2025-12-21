@@ -17,4 +17,8 @@ export const API_ENDPOINTS = {
   DOMAINS_GET: (slug: string) => `/domains/${slug}`,
   DOMAINS_UPDATE: (slug: string) => `/domains/${slug}`,
   DOMAINS_DELETE: (slug: string) => `/domains/${slug}`,
+  PARTNERS_CREATE: "/partners",
+  PARTNERS_GET: "/partners",
+  PARTNERS_GET_ALL: "/partners",
+  PARTNERS_UPDATE: "/partners",
 };

@@ -33,6 +33,13 @@ import {
   domainsGet,
   domainsUpdate,
 } from "./resources/domains";
+import {
+  partnersCreate,
+  partnersDescription,
+  partnersGet,
+  partnersGetAll,
+  partnersUpdate,
+} from "./resources/partners";
 
 export class Dub implements INodeType {
   description: INodeTypeDescription = {
@@ -79,12 +86,17 @@ export class Dub implements INodeType {
             name: "Link",
             value: "links",
           },
+          {
+            name: "Partner",
+            value: "partners",
+          },
         ],
         default: "links",
       },
       ...domainsDescription,
       ...foldersDescription,
       ...linksDescription,
+      ...partnersDescription,
     ],
   };
 
@@ -120,6 +132,12 @@ export class Dub implements INodeType {
         bulkCreate: linksBulkCreate,
         bulkUpdate: linksBulkUpdate,
         bulkDelete: linksBulkDelete,
+      },
+      partners: {
+        create: partnersCreate,
+        get: partnersGet,
+        getAll: partnersGetAll,
+        update: partnersUpdate,
       },
     };
 
