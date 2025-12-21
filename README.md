@@ -57,6 +57,7 @@ This node uses Bearer token authentication. You will need:
 - [Dub Homepage](https://dub.co/)
 - [Dub API Documentation](https://dub.co/docs/api-reference/introduction)
 - [n8n Community Nodes](https://docs.n8n.io/integrations/#community-nodes)
+- [n8n Documentation for LLMs](https://docs.n8n.io/llms.txt)
 
 ----
 

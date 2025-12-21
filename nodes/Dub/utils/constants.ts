@@ -9,4 +9,8 @@ export const API_ENDPOINTS = {
   LINKS_BULK_CREATE: "/links/bulk",
   LINKS_BULK_UPDATE: "/links/bulk",
   LINKS_BULK_DELETE: "/links/bulk",
+  FOLDERS_CREATE: "/folders",
+  FOLDERS_GET: (folderId: string) => `/folders/${folderId}`,
+  FOLDERS_UPDATE: (folderId: string) => `/folders/${folderId}`,
+  FOLDERS_DELETE: (folderId: string) => `/folders/${folderId}`,
 };
