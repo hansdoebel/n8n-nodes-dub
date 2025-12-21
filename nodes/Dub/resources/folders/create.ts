@@ -57,7 +57,7 @@ export const foldersCreateDescription: INodeProperties[] = [
             value: "write",
           },
         ],
-        default: "",
+        default: "read",
         description: "The access level of the folder within the workspace",
       },
     ],

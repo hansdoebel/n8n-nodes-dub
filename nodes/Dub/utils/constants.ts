@@ -13,4 +13,8 @@ export const API_ENDPOINTS = {
   FOLDERS_GET: (folderId: string) => `/folders/${folderId}`,
   FOLDERS_UPDATE: (folderId: string) => `/folders/${folderId}`,
   FOLDERS_DELETE: (folderId: string) => `/folders/${folderId}`,
+  DOMAINS_CREATE: "/domains",
+  DOMAINS_GET: (slug: string) => `/domains/${slug}`,
+  DOMAINS_UPDATE: (slug: string) => `/domains/${slug}`,
+  DOMAINS_DELETE: (slug: string) => `/domains/${slug}`,
 };

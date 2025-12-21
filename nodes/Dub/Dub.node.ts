@@ -26,6 +26,13 @@ import {
   foldersGet,
   foldersUpdate,
 } from "./resources/folders";
+import {
+  domainsCreate,
+  domainsDelete,
+  domainsDescription,
+  domainsGet,
+  domainsUpdate,
+} from "./resources/domains";
 
 export class Dub implements INodeType {
   description: INodeTypeDescription = {
@@ -61,6 +68,10 @@ export class Dub implements INodeType {
         noDataExpression: true,
         options: [
           {
+            name: "Domain",
+            value: "domains",
+          },
+          {
             name: "Folder",
             value: "folders",
           },
@@ -71,6 +82,7 @@ export class Dub implements INodeType {
         ],
         default: "links",
       },
+      ...domainsDescription,
       ...foldersDescription,
       ...linksDescription,
     ],
@@ -86,6 +98,12 @@ export class Dub implements INodeType {
       string,
       Record<string, (this: IExecuteFunctions) => Promise<INodeExecutionData[]>>
     > = {
+      domains: {
+        create: domainsCreate,
+        get: domainsGet,
+        update: domainsUpdate,
+        delete: domainsDelete,
+      },
       folders: {
         create: foldersCreate,
         get: foldersGet,
