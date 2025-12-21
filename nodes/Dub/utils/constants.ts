@@ -21,4 +21,6 @@ export const API_ENDPOINTS = {
   PARTNERS_GET: "/partners",
   PARTNERS_GET_ALL: "/partners",
   PARTNERS_UPDATE: "/partners",
+  CONVERSIONS_TRACK_LEAD: "/track/lead",
+  CONVERSIONS_TRACK_SALE: "/track/sale",
 };
