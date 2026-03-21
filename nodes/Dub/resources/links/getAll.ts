@@ -167,7 +167,6 @@ export async function linksGetAll(
   this: IExecuteFunctions,
 ): Promise<INodeExecutionData[]> {
   const returnAll = this.getNodeParameter("returnAll", 0) as boolean;
-  const limit = this.getNodeParameter("limit", 0) as number;
   const additionalFields = this.getNodeParameter(
     "additionalFields",
     0,
@@ -230,6 +229,7 @@ export async function linksGetAll(
     return this.helpers.returnJsonArray(allResults);
   }
 
+  const limit = this.getNodeParameter("limit", 0) as number;
   const qs: IDataObject = {
     page,
     pageSize: limit,
